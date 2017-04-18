@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>AudHesive</title>
+  <link rel="stylesheet" type="text/css" href="slick.css">
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>AudHesive</h1>
+    <h4>Gluing your sounds together since 2017</h4>
+  </div>
+</header>
+<section class="main-content">
+  <div>
+    <div id="left">
+      <div id="left-file-pool">
+        <div class="files">
+          <!-- files get appended here -->
+        </div>
+        <div class="instruction">
+          <h4>Add the files you want to start your audio with:</h4>
+          <button id="left-remove">Remove All</button>
+          <button id="left-trigger">Add Files</button>
+        </div>
+      </div>
+      <input id="fileDialogLeft" type="file" multiple/>
+      <p class="fileCounter">Total files: <span class="counter"></span><span class="error"></span></p>
+    </div>
+    <div id="right">
+      <div id="right-file-pool">
+        <div class="files">
+          <!-- files get appended here -->
+        </div>
+        <div class="instruction">
+          <h4>Add the files you want to end your audio with:</h4>
+          <button id="right-remove">Remove All</button>
+          <button id="right-trigger">Add Files</button>
+        </div>
+      </div>
+      <input id="fileDialogRight" type="file" multiple/>
+      <p class="fileCounter">Total files: <span class="counter"></span><span class="error"></span></p>
+    </div>
+  </div>
+  <div>
+    <div class="slide2content">
+      <h4>Where do you want to save your merged audio files?</h4>
+      <button id="chooseDest">Choose Destination</button>
+      <p id="chosenPath"></p>
+      <input id="folder_dialog_input" type="file" nwdirectory value="">
+    </div>
+  </div>
+  <div>
+    <div class="slide3content">
+      <div>
+        <button id="mergeFiles">Merge Files</button>
+        <button id="saveAll">Save All</button>
+      </div>
+      <progress value="0" max="100"></progress>
+      <div id="outputFiles">
+        <!-- list of merged files -->
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p class="beta-note">Beta release software. Treat with kindness...</p>
+  <p>&copy; 2017 - Attila Vago</p>
+</footer>
+
+</body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>

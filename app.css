@@ -1,0 +1,260 @@
+@font-face {
+    font-family: Pacifico-Regular;
+    src: url(Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto-Regular.ttf);
+}
+
+* {
+	outline: none;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: #6599FF;
+	font-family: 'Roboto-Regular', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Pacifico-Regular', cursive;
+	font-size: 40px;
+	color: white;
+	line-height: 40px;
+}
+
+header {
+	height: 20%;
+	text-align: center;
+}
+
+header > div {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+header > div > h4 {
+	color: white;
+}
+
+section {
+	height: 70%;
+}
+
+.slick-track, 
+.slick-list {
+	height: 100% !important;
+}
+
+.slick-slide {
+	padding-left: 50px;
+    padding-right: 50px;
+}
+
+#fileDialogLeft,
+#fileDialogRight,
+#folder_dialog_input {
+	display: none;
+}
+
+#left {
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding-right: 10px;
+}
+
+#right {
+	width: 50%;
+	height: 100%;
+	float: right;
+	padding-left: 10px;
+}
+
+.files {
+	height: 90%;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+#left-file-pool > .instruction,
+#right-file-pool > .instruction {
+	position: absolute;
+  	margin: auto;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  	height: 20px;
+  	text-align: center;
+}
+
+#left-file-pool, 
+#right-file-pool {
+	width: 100%;
+	height: 90%;
+	float: none;
+	background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    position: relative;
+    padding: 5px;
+}
+
+.instruction > button {
+	height: 40px;
+    display: block;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #FF9900;
+    color: white;
+}
+
+.barcontrols > button {
+	height: 40px;
+    display: block;
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+    background-color: #FF9900;
+    color: white;
+    float: right;
+}
+
+#left-remove,
+#right-remove {
+	display: none;
+	float: left;
+}
+
+#left-file-pool > .files > p, 
+#right-file-pool > .files > p,
+#outputFiles > p {
+	height: 40px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #4e4e4e;
+    float: none;
+    display: block;
+    margin-bottom: 5px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.slide2content {
+	text-align: center;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+	height: 120px;
+}
+
+#chosenPath, .fileCounter {
+	color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.error {
+	color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+button#chooseDest, button#mergeFiles, button#saveAll {
+	height: 40px;
+    display: block;
+    border-radius: 5px;
+    width: 170px;
+    margin: 0 auto;
+    font-size: 15px;
+    background-color: #FF9900;
+    color: white;
+}
+
+button#chooseDest {
+	margin-top: 10px;
+}
+
+button#saveAll {
+	display: none;
+}
+
+.slide3content {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+	text-align: center;
+	height: 400px;
+}
+
+.slide3content > div {
+	height: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.slide3content > progress {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 170px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+progress[value]::-webkit-progress-value {
+	background-color: #097054;
+	border-radius: 5px;
+}
+
+#outputFiles {
+	height: 250px;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 5px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+footer {
+	height: 10%;
+	width: 100%;
+	float: none;
+	text-align: center;
+	color: white;
+}
+
+footer > p {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.beta-note {
+	background: #d63737;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
