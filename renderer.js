@@ -9,6 +9,9 @@ const chooseDestBtn = document.getElementById('chooseDest')
 window.$ = window.jQuery = require('jquery');
 var slick = require('slick-carousel');
 const path = require('path');
+var ffmpeg = require('ffmpeg-static').path.replace('app.asar', 'app.asar.unpacked');
+console.log(ffmpeg);
+
 
 // slick stage slider    
 $('.main-content').slick({
@@ -106,9 +109,10 @@ $('#right-remove').click(function(){
   $('#right > .fileCounter > .counter').append(rightSoundsArray.length);
 });
 
-const ffmpeg = require('fluent-ffmpeg');
+const fffmpeg = require('fluent-ffmpeg');
 var audioconcat = require('audioconcat');
-ffmpeg.setFfmpegPath('./ffmpeg');
+fffmpeg.setFfmpegPath(ffmpeg);
+
 
 $('#mergeFiles').on('click', function(){
     var soundPair = [];

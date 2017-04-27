@@ -4,7 +4,9 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,6 +22,15 @@
     "electron": "~1.6.2"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "audioconcat": "^0.1.2",
+    "ffmpeg-static": "^2.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0"
+  },
+  "build": {
+    "asarUnpack": [
+      "**/app/node_modules/ffmpeg-static/*"
+    ]
   }
 }
